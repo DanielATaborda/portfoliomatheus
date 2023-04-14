@@ -256,6 +256,7 @@ main{
     display: flex;
     justify-content: center;
     width: 1200px;
+    height: 720;
     margin: 0 auto;
     padding: 2% 0;
 }
