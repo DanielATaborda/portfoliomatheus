@@ -225,6 +225,7 @@ main{
 .about{
     grid-area: s;
     background-color: var(--background-secondary-color);
+    display: grid;
 }
 
 .btn__mais{
@@ -269,21 +270,20 @@ hr{
 
 
 .card{
-    width: 940px;
+    flex-wrap: wrap;
     margin: 0 auto;
+    display: flex;
+    justify-content: center;
 }
 
 .card__body{
-    display: inline-block;
     text-align: center;
-    width: 30%;
     margin: 2rem 1%;
     color: var(--text-primary-color);
 }
 
 .card__body img{
-    width: 280px;
-    height: 200px;
+    max-width: 250px;
 }
 
 .card__body h2{
