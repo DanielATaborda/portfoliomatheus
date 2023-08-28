@@ -109,6 +109,10 @@ header{
     color: var(--text-primary-color);
 }
 
+.menuMobile{
+    display: none;
+}
+
 .logo{
     font-size: 2rem;
 }
@@ -117,6 +121,15 @@ header{
     display: flex;
     font-size: 1.25rem;
     gap: 3rem;
+}
+
+
+.links li{
+    transition: .5s;
+}
+
+.links li:hover{
+    color: var(--icons-primary-color);
 }
 
 
@@ -195,6 +208,7 @@ main{
     transition: 1s;
     border-radius: 50%;
     width: 50%;
+    z-index: -1;
 }
 
 .imagem__principal:hover{
@@ -291,3 +305,91 @@ hr{
     font-weight: 400;
 }
 
+@media (max-width:1130px){
+
+    body{
+        display: grid;
+        grid-template-columns: 3fr;
+    }
+
+    #circle1,#circle2,#circle3,#circle4{
+        display: none;
+    }
+    
+    .conteudo{
+        padding: 0 10%;
+    }
+
+    .links{
+        visibility: hidden;
+        overflow: hidden;
+        position: relative;
+        display: block;
+        position: absolute;
+        left: 0;
+        top: 70px;
+        width: 100%;
+        height: 0;
+        text-align: center;
+        z-index: 1000;
+        background: var(--background-primary-color);
+        transition: .5s;
+    }
+
+    .menuMobile{
+        background: none;
+        display: block;
+        border: none;
+        padding: 10px;
+    }
+
+    .navbar.active .links{
+        visibility: visible;
+        overflow: visible; 
+        height: 100%;
+    }
+
+    .links li{
+        padding: 10px;
+        border-bottom: 1px solid white;
+    }
+
+    .menuMobile i{
+        font-size: 2rem;
+    }
+
+    .conteudo{
+        flex-direction: column-reverse;
+        gap: 10px;
+    }
+
+    .conteudo__principal{
+        gap: 10px;
+        width: 100%;
+        margin-bottom: 30px;
+    }
+
+    .imagem__principal{
+        width: 350px;
+    }
+
+    .texto__principal{
+        font-size: 2.5rem;
+    }
+
+    .texto__principal__paragrafo{
+        font-size: 1.5rem;
+    }
+    
+    .barra__lateral{
+        display: none;
+    }
+
+    .conteudo__video{
+        padding: 0 30px;
+    }
+    
+    .conteudo__video__principal{
+        width: 100%;
+    }
+}
